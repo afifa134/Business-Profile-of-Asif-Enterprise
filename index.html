@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Best E-Rickshaw Dealer in Kolkata | Asif Enterprise</title>
+<meta name="description" content="Buy affordable e-rickshaw in Kolkata. Best price, warranty and service support. Contact us today.">
+<meta name="google-site-verification" content="RkSPxcnuJuRXfRO03vVluEnwCVZFz4179oPsRG9obF4" />
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --primary: #ff7a18;
+      --dark: #0f2027;
+      --gray: #f4f6f8;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Poppins', sans-serif; background:var(--gray); color:#333; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15,32,39,0.97);
+    }
+
+    .navbar {
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 20px;
+    }
+
+    .logo img { height:60px; }
+
+    .nav-links {
+      list-style:none;
+      display:flex;
+      gap:28px;
+    }
+
+    .nav-links a {
+      color:white;
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    .nav-links a:hover { color:var(--primary); }
+
+    .menu-toggle { display:none; color:white; font-size:24px; cursor:pointer; }
+
+    /* HERO */
+    #hero {
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      color:white;
+      text-align:center;
+      padding:160px 20px 120px;
+    }
+
+    #hero h1 { font-size:46px; }
+    #hero span { color:var(--primary); }
+
+    #hero p {
+      max-width:720px;
+      margin:20px auto 35px;
+      font-size:18px;
+    }
+
+    .hero-buttons a {
+      display:inline-block;
+      margin:8px;
+      padding:14px 34px;
+      border-radius:40px;
+      font-weight:600;
+      text-decoration:none;
+    }
+
+    .call { background:white; color:black; }
+    .whatsapp { background:var(--primary); color:white; }
+
+    /* TRUST STRIP */
+    .trust-strip {
+      background:white;
+      display:flex;
+      justify-content:center;
+      gap:30px;
+      flex-wrap:wrap;
+      padding:20px;
+    }
+
+    .trust-item {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:600;
+    }
+
+    .trust-item i { color:var(--primary); }
+
+    /* VEHICLES */
+    #vehicle-preview {
+      background:white;
+      padding:60px 20px;
+    }
+
+    #vehicle-preview h2 {
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .vehicle-grid {
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
+
+    .vehicle-card {
+      background:var(--gray);
+      padding:25px;
+      border-radius:18px;
+      text-align:center;
+      transition:.3s;
+    }
+
+    .vehicle-card:hover {
+      transform:translateY(-8px);
+      box-shadow:0 10px 25px rgba(0,0,0,.1);
+    }
+
+    .vehicle-card img {
+      width:100%;
+      max-height:220px;
+      object-fit:contain;
+      background:white;
+      border-radius:12px;
+    }
+
+    .enquire-btn {
+      display:inline-block;
+      margin-top:12px;
+      padding:10px 26px;
+      border-radius:25px;
+      background:var(--primary);
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .view-all {
+      display:block;
+      text-align:center;
+      margin-top:40px;
+      font-weight:600;
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    /* VISITING CARD */
+    .visiting-card-box {
+      text-align:center;
+      margin:60px 20px;
+    }
+
+    .visiting-card-box img {
+      max-width:360px;
+      width:100%;
+      margin-top:15px;
+    }
+
+    /* MAP */
+    .map-container {
+      max-width:1100px;
+      margin:40px auto;
+      border-radius:12px;
+      overflow:hidden;
+    }
+
+    iframe { width:100%; height:300px; border:0; }
+
+    /* INFO GRID */
+    .info-grid {
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:25px;
+      padding:40px 20px;
+    }
+
+    .info-box {
+      background:white;
+      padding:30px;
+      border-radius:16px;
+      text-align:center;
+    }
+
+    .info-box i {
+      font-size:36px;
+      color:var(--primary);
+      margin-bottom:12px;
+    }
+
+    /* CONTACT */
+    #contact {
+      background:linear-gradient(135deg,#203a43,#2c5364);
+      color:white;
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    footer {
+      background:black;
+      color:#aaa;
+      text-align:center;
+      padding:16px;
+    }
+
+    @media(max-width:768px){
+      .nav-links { display:none; }
+      .menu-toggle { display:block; }
+      #hero h1 { font-size:32px; }
+    }
+    .map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
+#contact {
+  background: linear-gradient(135deg, #0f2027, #203a43);
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+#contact h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+#contact p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+#contact a i {
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+#contact a i:hover {
+  transform: scale(1.25);
+  opacity: 0.85;
+}
+.site-footer {
+  background: #000;
+  color: #bbb;
+  text-align: center;
+  padding: 22px 15px;
+  font-size: 14px;
+}
+
+.site-footer p {
+  margin: 6px 0;
+}
+
+.site-footer strong {
+  color: #fff;
+}
+.service-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-link:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.jpeg" alt="Asif Enterprise Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#vehicle-preview">Vehicles</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+  </nav>
+</header>
+
+<section id="hero">
+  <h1>Power Your Journey with <span>Asif Enterprise</span>
+     now in Kolkata 
+  </h1>
+  <p>
+    Driving the future of electric mobility in Bagjola.
+    We provide reliable E-Rickshaws, Scooties, genuine batteries,
+    spare parts and complete documentation support.
+  </p>
+  
+  <div class="hero-buttons">
+    <a href="tel:9339874903" class="call">📞 Call Now</a>
+    <a href="https://wa.me/919339874903" class="whatsapp">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div class="trust-item"><i class="fa-solid fa-circle-check"></i> Genuine Products</div>
+  <div class="trust-item"><i class="fa-solid fa-headset"></i> After-Sales Support</div>
+  <div class="trust-item"><i class="fa-solid fa-file-shield"></i> Easy Documentation</div>
+</section>
+
+<section id="vehicle-preview">
+  <h2>Our Vehicles</h2>
+
+  <div class="vehicle-grid">
+
+    <div class="vehicle-card">
+      <img src="Rapidx.png" alt="E-Rickshaw">
+      <h3>E-Rickshaw</h3>
+      <p>Acid & Lithium options</p>
+      <a href="https://wa.me/919339874903?text=Hello%20I%20want%20details%20about%20E-Rickshaw" class="enquire-btn">Enquire Now</a>
+    </div>
+
+    <div class="vehicle-card">
+      <img src="scooty.jpeg" alt="Electric Scooty">
+      <h3>Scooty</h3>
+      <p>Perfect for city travel</p>
+      <a href="https://wa.me/919339874903?text=Hello%20I%20want%20details%20about%20Electric%20Scooty" class="enquire-btn">Enquire Now</a>
+    </div>
+
+    <div class="vehicle-card">
+      <img src="blazer.jpeg" alt="Electric Loader">
+      <h3>Loader</h3>
+      <p>Reliable electric loader for goods & delivery work</p>
+      <a href="https://wa.me/919339874903?text=Hello%20I%20want%20details%20about%20Electric%20Loader" class="enquire-btn">Enquire Now</a>
+    </div>
+
+  </div>
+
+  <a href="image.html" class="view-all">View All Vehicles →</a>
+</section>
+
+<section class="visiting-card-box">
+  <h2>Our Visiting Card</h2>
+  <img src="card.jpeg" alt="Asif Enterprise Visiting Card">
+</section>
+
+<section id="services">
+  <h2 style="text-align:center;">Our Services</h2>
+
+  <div class="info-grid">
+
+    <a href="service.html" class="info-box service-link">
+      <i class="fa-solid fa-screwdriver-wrench"></i>
+      <h4>Repairs & Maintenance</h4>
+      <p>All electric vehicle problems solved</p>
+    </a>
+
+    <a href="battery.html" class="info-box service-link">
+      <i class="fa-solid fa-battery-full"></i>
+      <h4>Battery Service</h4>
+      <p>Checkup, water filling & replacement</p>
+    </a>
+
+    <a href="documents.html" class="info-box service-link">
+      <i class="fa-solid fa-file"></i>
+      <h4>Documentation</h4>
+      <p>Number plate & complete paperwork</p>
+    </a>
+
+  </div>
+</section>
+
+<section id="location" style="padding:40px 20px; text-align:center;">
+  <h2>Find Us Easily</h2>
+  <p style="max-width:700px; margin:10px auto 25px; color:#555;">
+    Visit Asif Enterprise at Bagjola for trusted electric vehicles, service and support.
+  </p>
+</section>
+
+<div class="map-container">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.448915962193!2d88.73890837515721!3d22.78582397934044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8ad99ba884c59%3A0x1c38cdd4f3c1ee98!2sASIF%20ENTERPRISE!5e0!3m2!1sen!2sin!4v1770202250429!5m2!1sen!2sin"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <p style="margin-bottom:15px;">
+    <i class="fa-solid fa-location-dot"></i> Bagjola  
+    &nbsp; | &nbsp;
+    <i class="fa-solid fa-phone"></i> 
+    <a href="tel:9339874903" style="color:#fff; text-decoration:none;">
+      9339874903
+    </a>
+  </p>
+
+  <div style="margin-top:20px; font-size:22px;">
+    
+    <a href="https://wa.me/919339874903" target="_blank" style="color:#25D366; margin:0 12px;">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <a href="mailto:tarafdere.asif@gmail.com" style="color:#EA4335; margin:0 12px;">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+
+    <a href="https://www.instagram.com/asif.tfr?igsh=MW9iMDRqZzd3bXV6ag==" target="_blank" style="color:#E4405F; margin:0 12px;">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/share/1771PPuJnq/" target="_blank" style="color:#1877F2; margin:0 12px;">
+      <i class="fa-brands fa-facebook"></i>
+    </a>
+
+  </div>
+</section>
+
+
+<footer class="site-footer">
+  <p>© 2026 <strong>Asif Enterprise</strong>. All Rights Reserved.</p>
+  <p>
+    E-Rickshaw • E-Scooty • Loader • Battery • Service • Documentation
+  </p>
+</footer>
+</body>
+</html>
